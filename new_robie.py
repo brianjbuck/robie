@@ -26,4 +26,6 @@ if __name__ == '__main__':
     for team in teams_list:
         team.load_schedule(schedule_items)
         teams[team.name] = team
-    bubble_rank(teams)
+    teams = bubble_rank(teams)
+    for team_name, team_obj in teams.items():
+        print(team_name, team_obj.bubble_score)

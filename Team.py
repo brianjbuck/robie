@@ -9,7 +9,6 @@ class Team:
         self.name = name
         self.mascot = mascot
         self.conference = conference
-        self.record = '0-0'
         self.rank = 0
         self.bubble_score = 0.0
         self.rpi_rank = 0
@@ -48,6 +47,10 @@ class Team:
         )
 
     @property
+    def record(self):
+        return '{}-{}'.format(self.wins, self.losses)
+
+    @property
     def unique_opponents(self):
         return list(set(self.opponents))
 
@@ -73,6 +76,8 @@ class Team:
                 )
                 self.schedule.append(game)
                 self.opponents.append(opponent)
+        self.wins = len([g for g in self.schedule if g.result == Result.Win])
+        self.losses = len([g for g in self.schedule if g.result == Result.Loss])
 
     def get_game_opponent(self, schedule_item):
         if self.name == schedule_item.home_team:

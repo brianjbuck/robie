@@ -98,5 +98,4 @@ def bubble_rank(teams):
     # convert the values before returning.
     for team, value in start_vals.items():
         teams[team].bubble_score = round(value / 100.0, 4)
-        t = teams[team]
-        print(t, t.bubble_score)
+    return teams
