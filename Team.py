@@ -51,50 +51,21 @@ class Team:
     def unique_opponents(self):
         return list(set(self.opponents))
 
-    def create_schedule(self, schedule_items):
+    def load_schedule(self, schedule_items):
         """
         Take a list of ScheduleItem objects and load them into a team.
         Also, set the team's opponents at the same time.
         """
-        for si in schedule_items:
-            if self.name == si.home_team or self.name == si.away_team:
-                is_neutral_site = 'n' in si.options.casefold()
-                if self.name == si.home_team and not is_neutral_site:
-                    location = Location.Home
-                elif self.name == si.away_team and not is_neutral_site:
-                    location = Location.Away
-                else:
-                    location = Location.Neutral
-
-                if location == Location.Home:
-                    if si.home_team_score > si.away_team_score:
-                        result = Result.Win
-                    else:
-                        result = Result.Loss
-                elif location == Location.Away:
-                    if si.home_team_score < si.away_team_score:
-                        result = Result.Win
-                    else:
-                        result = Result.Loss
-                elif location == Location.Neutral:
-                    if self.name == si.home_team:
-                        if si.home_team_score > si.away_team_score:
-                            result = Result.Win
-                        else:
-                            result = Result.Loss
-                    elif self.name == si.away_team:
-                        if si.home_team_score < si.away_team_score:
-                            result = Result.Win
-                        else:
-                            result = Result.Loss
-
-                if self.name == si.home_team:
-                    opponent = si.away_team
-                else:
-                    opponent = si.home_team
+        for schedule_item in schedule_items:
+            home_team_name = schedule_item.home_team
+            away_team_name = schedule_item.away_team
+            if self.name == home_team_name or self.name == away_team_name:
+                location = self.get_game_location(schedule_item)
+                result = self.get_game_result(location, schedule_item)
+                opponent = self.get_game_opponent(schedule_item)
 
                 game = Game(
-                    game_date=si.game_date,
+                    game_date=schedule_item.game_date,
                     opponent=opponent,
                     score='',
                     location=location,
@@ -102,3 +73,49 @@ class Team:
                 )
                 self.schedule.append(game)
                 self.opponents.append(opponent)
+
+    def get_game_opponent(self, schedule_item):
+        if self.name == schedule_item.home_team:
+            opponent = schedule_item.away_team
+        else:
+            opponent = schedule_item.home_team
+        return opponent
+
+    def get_game_location(self, schedule_item):
+        home_team_name = schedule_item.home_team
+        away_team_name = schedule_item.away_team
+        is_neutral_site = 'n' in schedule_item.options.casefold()
+        if self.name == home_team_name and not is_neutral_site:
+            location = Location.Home
+        elif self.name == away_team_name and not is_neutral_site:
+            location = Location.Away
+        else:
+            location = Location.Neutral
+        return location
+
+    def get_game_result(self, location, schedule_item):
+        result = None
+        home_team_score = schedule_item.home_team_score
+        away_team_score = schedule_item.away_team_score
+        if location == Location.Home:
+            if home_team_score > away_team_score:
+                result = Result.Win
+            else:
+                result = Result.Loss
+        elif location == Location.Away:
+            if home_team_score < away_team_score:
+                result = Result.Win
+            else:
+                result = Result.Loss
+        elif location == Location.Neutral:
+            if self.name == schedule_item.home_team:
+                if home_team_score > away_team_score:
+                    result = Result.Win
+                else:
+                    result = Result.Loss
+            elif self.name == schedule_item.away_team:
+                if home_team_score < away_team_score:
+                    result = Result.Win
+                else:
+                    result = Result.Loss
+        return result

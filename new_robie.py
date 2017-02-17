@@ -24,6 +24,6 @@ if __name__ == '__main__':
 
     teams = {}
     for team in teams_list:
-        team.create_schedule(schedule_items)
+        team.load_schedule(schedule_items)
         teams[team.name] = team
     bubble_rank(teams)
