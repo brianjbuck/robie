@@ -58,9 +58,10 @@ class Team:
         """
         for si in schedule_items:
             if self.name == si.home_team or self.name == si.away_team:
-                if self.name == si.home_team:
+                is_neutral_site = 'n' in si.options.casefold()
+                if self.name == si.home_team and not is_neutral_site:
                     location = Location.Home
-                elif self.name == si.away_team:
+                elif self.name == si.away_team and not is_neutral_site:
                     location = Location.Away
                 else:
                     location = Location.Neutral
