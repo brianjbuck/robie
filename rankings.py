@@ -2,15 +2,27 @@ import copy
 
 from scheduleitem import Location, Result
 
-__all__ = ('Bubble', 'RPI')
+__all__ = (
+    'Bubble', 'RPI', 'SOS',
+    'do_bubble', 'do_sos',
+    'do_rpi', 'do_rpi_adjusted'
+)
 
 
 class RankingBase:
 
-    def __init__(self, teams):
-        self.teams = copy.deepcopy(teams)  # Work on a copy, not the original
-        self.team_map = {team.name: team for team in self.teams}
-        self.team_names = set(self.team_map.keys())
+    def __call__(self, *args, **kwargs):
+        self.__init__(*args, **kwargs)
+        return self.rank()
+
+    def __init__(self, teams=None):
+        # Work on a copy, not the original
+        self.teams = copy.deepcopy(teams) if teams else []
+        self.team_map = {team.name: team for team in self.teams} if teams else {}
+        self.team_names = set(self.team_map.keys()) if teams else set()
+
+    def rank(self):
+        raise NotImplementedError
 
     def sort_and_rank(self):
         sorted_teams = sorted(self.teams, key=lambda t: t.score, reverse=True)
@@ -24,37 +36,105 @@ class RPI(RankingBase):
     def rank(self):
         for team in self.teams:
             wp = team.wins / (team.wins + team.losses)
-
-            opp_wins = 0
-            opp_losses = 0
-            for opponent_name in team.opponents:
-                opponent = self.team_map.get(opponent_name)
-                if opponent:
-                    opp_wins += opponent.wins
-                    opp_losses += opponent.losses
-                else:
-                    continue
-
-                oopp_wins = 0
-                oopp_losses = 0
-                for opponents_opponents_name in opponent.opponents:
-                    opponents_opponent = self.team_map.get(opponents_opponents_name)
-                    if opponents_opponent:
-                        oopp_wins += opponents_opponent.wins
-                        oopp_losses += opponents_opponent.losses
-                oowp = oopp_wins / (oopp_wins + oopp_losses)
-            owp = opp_wins / (opp_wins + opp_losses)
-            team.score = self.calculate_rpi(wp, owp, oowp)
+            owp = self.opponents_win_percentage(team.opponents)
+            oowp = self.opponents_opponents_win_percentage(team.opponents)
+            team.score = self.calculate(wp=wp, owp=owp, oowp=oowp)
         return self.sort_and_rank()
 
     @staticmethod
-    def calculate_rpi(wp, owp, oowp):
+    def calculate(**kwargs):
+        wp = kwargs.get('wp')
+        owp = kwargs.get('owp')
+        oowp = kwargs.get('oowp')
         return (0.25 * wp) + (0.5 * owp) + (0.25 * oowp)
 
-class SOS(RankingBase):
+    def opponents_win_percentage(self, opponents):
+        wins = 0
+        losses = 0
+        for team_name in opponents:
+            team = self.team_map.get(team_name)
+            if team:
+                wins += team.wins
+                losses += team.losses
+            else:
+                continue
+        return wins / (wins + losses)
+
+    def opponents_opponents_win_percentage(self, opponents):
+        opponents_opponents = []
+        for opponent_name in opponents:
+            opponent = self.team_map.get(opponent_name)
+            if opponent:
+                for opponents_opponent_name in opponent.opponents:
+                    opponents_opponent = self.team_map.get(opponents_opponent_name)
+                    if opponents_opponent:
+                        opponents_opponents.append(opponents_opponent)
+        wins = sum([team.wins for team in opponents_opponents])
+        losses = sum([team.losses for team in opponents_opponents])
+        return wins / (wins + losses)
+
+
+class SOS(RPI):
 
     def rank(self):
-        pass
+        for team in self.teams:
+            owp = self.opponents_win_percentage(team.opponents)
+            oowp = self.opponents_opponents_win_percentage(team.opponents)
+            team.score = self.calculate(owp=owp, oowp=oowp)
+        return self.sort_and_rank()
+
+    @staticmethod
+    def calculate(**kwargs):
+        owp = kwargs.get('owp')
+        oowp = kwargs.get('oowp')
+        return ((2.0 / 3.0) * owp) + ((1.0 / 3.0) * oowp)
+
+
+class RPIAdjusted(RPI):
+
+    def rank(self):
+        for team in self.teams:
+            wp = self.adjusted_win_percentage(team.schedule)
+            owp = self.opponents_win_percentage(team.opponents)
+            oowp = self.opponents_opponents_win_percentage(team.opponents)
+            team.score = self.calculate(wp=wp, owp=owp, oowp=oowp)
+        return self.sort_and_rank()
+
+    @staticmethod
+    def adjusted_win_percentage(schedule):
+        home_win_count = 0
+        road_win_count = 0
+        neutral_win_count = 0
+        home_loss_count = 0
+        road_loss_count = 0
+        neutral_loss_count = 0
+
+        for game in schedule:
+            if game.result == Result.Win:
+                if game.location == Location.Home:
+                    home_win_count += 1
+                elif game.location == Location.Away:
+                    road_win_count += 1
+                else:
+                    neutral_win_count += 1
+            elif game.result == Result.Loss:
+                if game.location == Location.Home:
+                    home_loss_count += 1
+                elif game.location == Location.Away:
+                    road_loss_count += 1
+                else:
+                    neutral_loss_count += 1
+
+        # Adjusted Win Count
+        adjusted_win_count = (home_win_count * 0.6) + \
+                             (neutral_win_count) + \
+                             (road_win_count * 1.4)
+        # Adjusted Loss Count
+        adjusted_loss_count = (home_loss_count * 1.4) + \
+                              (neutral_loss_count) + \
+                              (road_loss_count * 0.6)
+        # Adjusted Win Percentage
+        return adjusted_win_count / (adjusted_win_count + adjusted_loss_count) if adjusted_win_count + adjusted_loss_count > 0 else 0.0
 
 
 class Bubble(RankingBase):
@@ -66,7 +146,7 @@ class Bubble(RankingBase):
     low = (base / bonus) * penalty  # 10.71
     """
 
-    def __init__(self, teams, start=75.0, base=25.0, bonus=1.4, penalty=0.6):
+    def __init__(self, teams=None, start=75.0, base=25.0, bonus=1.4, penalty=0.6):
         super().__init__(teams)
 
         self.starting_scores = {}
@@ -144,7 +224,7 @@ class Bubble(RankingBase):
 
         # convert the values before returning.
         for team in self.teams:
-            team.score = round(self.starting_scores[team.name] / 100.0, 4)
+            team.score = self.starting_scores[team.name] / 100.0
         return self.sort_and_rank()
 
     def calculate_ranking_for_team(self, team):
@@ -189,3 +269,9 @@ class Bubble(RankingBase):
             return 40.0 + self.factor_home_win
         else:
             return 40.0 + self.factor_home_loss
+
+
+do_rpi = RPI()
+do_rpi_adjusted = RPIAdjusted()
+do_sos = SOS()
+do_bubble = Bubble()
