@@ -4755,3 +4755,235 @@
 02/15/2017 Duke                    65 Virginia                55    
 02/15/2017 Chattanooga             74 VMI                     68    
 02/15/2017 Furman                  74 Western Carolina        62    
+02/16/2017 Eastern Illinois        80 Austin Peay             85    
+02/16/2017 Eastern Kentucky        72 Belmont                 76    
+02/16/2017 Robert Morris           73 Bryant                  81    
+02/16/2017 San Diego               70 BYU                     82    
+02/16/2017 St. Francis PA          80 Central Connecticut     71    
+02/16/2017 Northern Kentucky       62 Cleveland St.           60    
+02/16/2017 Memphis                 62 Connecticut             65    
+02/16/2017 Drexel                  67 Delaware                68    
+02/16/2017 San Francisco           61 Gonzaga                 96    
+02/16/2017 College of Charleston   76 Hofstra                 72    
+02/16/2017 Sam Houston St.         77 Houston Baptist         88    
+02/16/2017 North Dakota            77 Idaho St.               61    
+02/16/2017 William & Mary          92 James Madison           95 1  
+02/16/2017 Jacksonville            79 Kennesaw St.            78    
+02/16/2017 North Florida           93 Lipscomb                82    
+02/16/2017 UC Davis                69 Long Beach St.          78 1  
+02/16/2017 Florida Atlantic        69 Louisiana Tech          95    
+02/16/2017 UAB                     59 Marshall                74    
+02/16/2017 Abilene Christian       82 McNeese St.             78    
+02/16/2017 Wisconsin               58 Michigan                64    
+02/16/2017 Niagara                 75 Monmouth                93    
+02/16/2017 Sacramento St.          67 Montana                 65    
+02/16/2017 Portland St.            90 Montana St.             92 1  
+02/16/2017 SIU Edwardsville        73 Murray St.              84    
+02/16/2017 Oral Roberts            76 Nebraska Omaha          83 1  
+02/16/2017 Central Arkansas        89 Nicholls St.            96 1  
+02/16/2017 Florida Gulf Coast      80 NJIT                    73    
+02/16/2017 UTEP                    77 North Texas             71 1  
+02/16/2017 UNC Wilmington          66 Northeastern            65    
+02/16/2017 Southeastern Louisiana  73 Northwestern St.        66    
+02/16/2017 Utah                    61 Oregon                  79    
+02/16/2017 Colorado                60 Oregon St.              52    
+02/16/2017 Pacific                 76 Portland                65    
+02/16/2017 UTSA                    68 Rice                    80    
+02/16/2017 Fairleigh Dickinson     81 Sacred Heart            91    
+02/16/2017 Loyola Marymount        48 Saint Mary's            81    
+02/16/2017 Pepperdine              55 Santa Clara            106    
+02/16/2017 Grand Canyon            61 Seattle                 58    
+02/16/2017 Manhattan               71 Siena                   94    
+02/16/2017 FIU                     66 Southern Miss           69 1  
+02/16/2017 Lamar                   61 Stephen F. Austin       70    
+02/16/2017 Morehead St.            52 Tennessee St.           64    
+02/16/2017 Elon                    66 Towson                  85    
+02/16/2017 Cal St. Fullerton       56 UC Riverside            55    
+02/16/2017 Hawaii                  54 UC Santa Barbara        56    
+02/16/2017 Stetson                 83 USC Upstate             72    
+02/16/2017 Cal St. Bakersfield     80 Utah Valley             71    
+02/16/2017 Texas A&M               67 Vanderbilt              72    
+02/16/2017 Mount St. Mary's        65 Wagner                  69    
+02/16/2017 Arizona St.             83 Washington              81    
+02/16/2017 Arizona                 78 Washington St.          59    
+02/16/2017 Northern Colorado       63 Weber St.               69    
+02/16/2017 Middle Tennessee        78 Western Kentucky        52    
+02/16/2017 Wright St.              84 Youngstown St.          81    
+02/17/2017 Kent St.                70 Akron                   67    
+02/17/2017 Little Rock             58 Arkansas St.            67    
+02/17/2017 Penn                    96 Brown                   72    
+02/17/2017 Cornell                 69 Dartmouth               65    
+02/17/2017 Illinois Chicago        74 Detroit                 69    
+02/17/2017 Idaho                   67 Eastern Washington      77    
+02/17/2017 Columbia                72 Harvard                 78    
+02/17/2017 Iona                    95 Marist                  88    
+02/17/2017 Valparaiso              71 Oakland                 82    
+02/17/2017 Fairfield               89 Quinnipiac              86 1  
+02/17/2017 VCU                     84 Richmond                73    
+02/17/2017 Canisius                85 Rider                   77    
+02/17/2017 California              68 Stanford                73    
+02/17/2017 Princeton               71 Yale                    52    
+02/18/2017 LSU                     72 Alabama                 90    
+02/18/2017 Alabama St.             67 Alcorn St.              75    
+02/18/2017 Mississippi             80 Arkansas                98    
+02/18/2017 SIU Edwardsville        84 Austin Peay             92    
+02/18/2017 Kansas                  67 Baylor                  65    
+02/18/2017 Morehead St.            73 Belmont                 89    
+02/18/2017 Hampton                 61 Bethune Cookman         62    
+02/18/2017 Wyoming                 87 Boise St.               91    
+02/18/2017 Evansville              72 Bradley                 84    
+02/18/2017 Princeton               66 Brown                   51    
+02/18/2017 St. Francis PA          75 Bryant                  79    
+02/18/2017 Miami OH                58 Buffalo                 71    
+02/18/2017 Saint Mary's            70 BYU                     57    
+02/18/2017 Hawaii                  82 Cal Poly                61    
+02/18/2017 UC Davis                72 Cal St. Fullerton       79    
+02/18/2017 UNC Asheville           66 Campbell                53    
+02/18/2017 Robert Morris           74 Central Connecticut     64    
+02/18/2017 Ball St.               109 Central Michigan       100 1  
+02/18/2017 High Point              75 Charleston Southern     76    
+02/18/2017 East Tennessee St.      65 Chattanooga             51    
+02/18/2017 Tulsa                   60 Cincinnati              80    
+02/18/2017 Wright St.              74 Cleveland St.           68 2  
+02/18/2017 Columbia                79 Dartmouth               80 1  
+02/18/2017 St. Bonaventure         72 Dayton                  76    
+02/18/2017 William & Mary          85 Delaware                64    
+02/18/2017 Missouri St.            76 Drake                   73    
+02/18/2017 Elon                    65 Drexel                  56    
+02/18/2017 Wake Forest             94 Duke                    99    
+02/18/2017 UCF                     61 East Carolina           58    
+02/18/2017 Mount St. Mary's        79 Fairleigh Dickinson     74    
+02/18/2017 Norfolk St.             77 Florida A&M             65 2  
+02/18/2017 Saint Louis             40 Fordham                 54    
+02/18/2017 South Dakota St.        97 Fort Wayne              89    
+02/18/2017 New Mexico              61 Fresno St.              71    
+02/18/2017 UNC Greensboro          73 Furman                  52    
+02/18/2017 Rhode Island            77 George Mason            74    
+02/18/2017 Kentucky                82 Georgia                 77    
+02/18/2017 Texas St.               67 Georgia Southern        70    
+02/18/2017 UT Arlington            68 Georgia St.             67    
+02/18/2017 Pacific                 61 Gonzaga                 82    
+02/18/2017 Cornell                 75 Harvard                 87    
+02/18/2017 UNC Wilmington          83 Hofstra                 76    
+02/18/2017 SMU                     76 Houston                 66    
+02/18/2017 Randall                 78 Houston Baptist         92    
+02/18/2017 North Carolina A&T      53 Howard                  84    
+02/18/2017 Northern Colorado       87 Idaho St.               81    
+02/18/2017 Sam Houston St.         53 Incarnate Word          69    
+02/18/2017 Illinois                70 Iowa                    66    
+02/18/2017 TCU                     71 Iowa St.                84    
+02/18/2017 Grambling St.           62 Jackson St.             59 1  
+02/18/2017 Tennessee Tech          79 Jacksonville St.        78 1  
+02/18/2017 North Florida           68 Kennesaw St.            85    
+02/18/2017 Saint Joseph's          68 La Salle                83    
+02/18/2017 Jacksonville            69 Lipscomb                81    
+02/18/2017 Sacred Heart            82 LIU Brooklyn            83    
+02/18/2017 Louisiana Lafayette     85 Louisiana Monroe        84    
+02/18/2017 FIU                     61 Louisiana Tech          77    
+02/18/2017 Virginia Tech           90 Louisville              94    
+02/18/2017 Pepperdine              61 Loyola Marymount        82    
+02/18/2017 Xavier                  61 Marquette               83    
+02/18/2017 Middle Tennessee        97 Marshall                86    
+02/18/2017 North Carolina Central  82 Maryland Eastern Shore  69    
+02/18/2017 Davidson                79 Massachusetts           74    
+02/18/2017 Clemson                 65 Miami FL                71    
+02/18/2017 Green Bay               80 Milwaukee               56    
+02/18/2017 Florida                 57 Mississippi St.         52    
+02/18/2017 Portland St.            82 Montana                 85    
+02/18/2017 Sacramento St.          59 Montana St.             62    
+02/18/2017 Savannah St.            75 Morgan St.              83    
+02/18/2017 Eastern Illinois        82 Murray St.              65    
+02/18/2017 Army                    71 Navy                    68    
+02/18/2017 Utah St.                66 Nevada                  77    
+02/18/2017 Hartford                52 New Hampshire           82    
+02/18/2017 Central Arkansas        61 New Orleans             84    
+02/18/2017 Northwestern St.        80 Nicholls St.            78    
+02/18/2017 Stetson                 56 NJIT                    60    
+02/18/2017 Virginia                41 North Carolina          65    
+02/18/2017 Notre Dame              81 North Carolina St.      72    
+02/18/2017 Western Illinois        91 North Dakota St.       100 2  
+02/18/2017 UTSA                    73 North Texas             83    
+02/18/2017 College of Charleston   85 Northeastern            71    
+02/18/2017 Toledo                  88 Northern Illinois       80 1  
+02/18/2017 Rutgers                 65 Northwestern            69    
+02/18/2017 Bowling Green           75 Ohio                    95    
+02/18/2017 Nebraska                58 Ohio St.                57    
+02/18/2017 Oklahoma                92 Oklahoma St.            96    
+02/18/2017 Charlotte               48 Old Dominion            72    
+02/18/2017 Colorado                73 Oregon                 101    
+02/18/2017 Florida St.             66 Pittsburgh              80    
+02/18/2017 San Francisco           65 Portland                51    
+02/18/2017 Mississippi Valley St.  69 Prairie View A&M        82    
+02/18/2017 Gardner Webb            84 Presbyterian            56    
+02/18/2017 Michigan St.            63 Purdue                  80    
+02/18/2017 Longwood                72 Radford                 79    
+02/18/2017 UTEP                    79 Rice                    71    
+02/18/2017 VMI                     61 Samford                 80    
+02/18/2017 Air Force               78 San Jose St.            83 1  
+02/18/2017 San Diego               60 Santa Clara             58 2  
+02/18/2017 Cal St. Bakersfield     51 Seattle                 48    
+02/18/2017 Villanova               92 Seton Hall              70    
+02/18/2017 Niagara                 70 Siena                   76    
+02/18/2017 Appalachian St.         74 South Alabama           87    
+02/18/2017 Coppin St.              79 South Carolina St.      84    
+02/18/2017 Oral Roberts            72 South Dakota            86    
+02/18/2017 Tennessee Martin        61 Southeast Missouri St.  90    
+02/18/2017 Stephen F. Austin       60 Southeastern Louisiana  52    
+02/18/2017 Alabama A&M             64 Southern                77    
+02/18/2017 Florida Atlantic        94 Southern Miss           82    
+02/18/2017 Northern Arizona        68 Southern Utah           84    
+02/18/2017 Wagner                  73 St. Francis NY          55    
+02/18/2017 Binghamton              55 Stony Brook             76    
+02/18/2017 Missouri                70 Tennessee               90    
+02/18/2017 Eastern Kentucky        66 Tennessee St.           68    
+02/18/2017 Kansas St.              64 Texas                   61    
+02/18/2017 Auburn                  62 Texas A&M               81    
+02/18/2017 Lamar                   63 Texas A&M Corpus Chris  70    
+02/18/2017 Arkansas Pine Bluff     40 Texas Southern          78    
+02/18/2017 Mercer                  89 The Citadel             78    
+02/18/2017 James Madison           65 Towson                  75    
+02/18/2017 Coastal Carolina        78 Troy                    87    
+02/18/2017 South Florida           71 Tulane                  94    
+02/18/2017 UC Riverside            60 UC Irvine               79    
+02/18/2017 Long Beach St.          66 UC Santa Barbara        48    
+02/18/2017 USC                     70 UCLA                   102    
+02/18/2017 UMass Lowell           102 UMBC                   108    
+02/18/2017 Chicago St.             65 UMKC                    84    
+02/18/2017 Florida Gulf Coast      97 USC Upstate             89 1  
+02/18/2017 New Mexico St.         107 UT Rio Grande Valley   101    
+02/18/2017 Grand Canyon            77 Utah Valley             71    
+02/18/2017 South Carolina          62 Vanderbilt              71    
+02/18/2017 Arizona                 76 Washington              68    
+02/18/2017 Arizona St.             71 Washington St.          86    
+02/18/2017 North Dakota            77 Weber St.               68    
+02/18/2017 Texas Tech              74 West Virginia           83 2  
+02/18/2017 Eastern Michigan        80 Western Michigan        88    
+02/18/2017 Northern Iowa           44 Wichita St.             73    
+02/18/2017 Liberty                 67 Winthrop                84    
+02/18/2017 Western Carolina        56 Wofford                 84    
+02/18/2017 Northern Kentucky       77 Youngstown St.          81    
+02/19/2017 Holy Cross              69 American                54    
+02/19/2017 Bucknell                86 Boston University       66    
+02/19/2017 DePaul                  66 Butler                  82    
+02/19/2017 Georgetown              70 Creighton               87    
+02/19/2017 IUPUI                   83 Denver                  72    
+02/19/2017 Valparaiso              83 Detroit                 63    
+02/19/2017 George Washington       77 Duquesne                70    
+02/19/2017 Syracuse                65 Georgia Tech            71    
+02/19/2017 Loyola Chicago          63 Illinois St.            65    
+02/19/2017 Southern Illinois       74 Indiana St.             68    
+02/19/2017 Rider                  103 Iona                    85    
+02/19/2017 Lehigh                  81 Lafayette               55    
+02/19/2017 Colgate                 66 Loyola MD               56 1  
+02/19/2017 Albany                  74 Maine                   56    
+02/19/2017 Quinnipiac              74 Manhattan               95    
+02/19/2017 Canisius                74 Marist                  76    
+02/19/2017 Michigan                78 Minnesota               83 1  
+02/19/2017 Illinois Chicago        75 Oakland                 87    
+02/19/2017 Utah                    67 Oregon St.              68    
+02/19/2017 Fairfield               55 Saint Peter's           74    
+02/19/2017 UNLV                    64 San Diego St.           77    
+02/19/2017 Connecticut             64 Temple                  63    
+02/19/2017 UAB                     64 Western Kentucky        76    
+02/19/2017 Maryland                60 Wisconsin               71    
+02/19/2017 Penn                    71 Yale                    55    

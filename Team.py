@@ -10,7 +10,11 @@ class Team:
         self.mascot = mascot
         self.conference = conference
         self.rank = 0
-        self.bubble_score = 0.0
+        self.score = 0.0
+        self.opponents = []
+        self.schedule = []
+        self.wins = 0
+        self.losses = 0
         self.rpi_rank = 0
         self.rpi = 0.0
         self.rpi_adj_rank = 0
@@ -27,15 +31,11 @@ class Team:
         self.avg_opp_sos_rank = 0
         self.last_n_games = ''
         self.last_n_games_record = '0-0'
-        self.schedule = []
-        self.wins = 0
-        self.losses = 0
         self.win_loss_str = ''
         self.wp = 0.0
         self.awp = 0.0
         self.owp = 0.0
         self.oowp = 0.0
-        self.opponents = []
 
     def __str__(self):
         return '{} {}'.format(self.name, self.mascot)

@@ -1,6 +1,6 @@
 import csv
 
-from bubblerank import bubble_rank
+from rankings import Bubble, RPI
 from scheduleitem import ScheduleItem
 from team import Team
 
@@ -19,13 +19,30 @@ def load_teams_data(data_file):
 
 
 if __name__ == '__main__':
-    teams_list = load_teams_data('d1_2017.csv')
+    teams = load_teams_data('d1_2017.csv')
     schedule_items = load_schedules('GamesFiles/cbbga17.txt')
 
-    teams = {}
-    for team in teams_list:
+    for team in teams:
         team.load_schedule(schedule_items)
-        teams[team.name] = team
-    teams = bubble_rank(teams)
-    for team_name, team_obj in teams.items():
-        print(team_name, team_obj.bubble_score)
+
+    rpi_ranker = RPI(teams)
+    rpi_ranked = rpi_ranker.rank()
+    bubble_ranker = Bubble(teams)
+    bubble_ranked = bubble_ranker.rank()
+    team_count = len(teams)
+    for i in range(team_count):
+        print('{:>3} {:05.4f} {} {} {:>3} {:05.4f} {} {}'.format(
+            rpi_ranked[i].rank,
+            rpi_ranked[i].score,
+            rpi_ranked[i].record,
+            rpi_ranked[i].name,
+            bubble_ranked[i].rank,
+            bubble_ranked[i].score,
+            bubble_ranked[i].record,
+            bubble_ranked[i].name
+        )
+    )
+
+    # TODO: Make ranker callable class
+    # TODO: Implement SOS
+    # TODO: Make option to remove postseason games from output
