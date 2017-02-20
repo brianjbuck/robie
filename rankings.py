@@ -16,9 +16,9 @@ class RankingBase:
         return self.rank()
 
     def __init__(self, teams=None):
-        # Work on a copy, not the original
+        # Always work on a copy, not the original
         self.teams = copy.deepcopy(teams) if teams else []
-        self.team_map = {team.name: team for team in self.teams} if teams else {}
+        self.team_map = {t.name: t for t in self.teams} if teams else {}
         self.team_names = set(self.team_map.keys()) if teams else set()
 
     def rank(self):
@@ -56,8 +56,6 @@ class RPI(RankingBase):
             if team:
                 wins += team.wins
                 losses += team.losses
-            else:
-                continue
         return wins / (wins + losses)
 
     def opponents_opponents_win_percentage(self, opponents):
@@ -94,10 +92,10 @@ class RPIAdjusted(RPI):
 
     def rank(self):
         for team in self.teams:
-            wp = self.adjusted_win_percentage(team.schedule)
+            awp = self.adjusted_win_percentage(team.schedule)
             owp = self.opponents_win_percentage(team.opponents)
             oowp = self.opponents_opponents_win_percentage(team.opponents)
-            team.score = self.calculate(wp=wp, owp=owp, oowp=oowp)
+            team.score = self.calculate(wp=awp, owp=owp, oowp=oowp)
         return self.sort_and_rank()
 
     @staticmethod
@@ -117,7 +115,7 @@ class RPIAdjusted(RPI):
                     road_win_count += 1
                 else:
                     neutral_win_count += 1
-            elif game.result == Result.Loss:
+            else:
                 if game.location == Location.Home:
                     home_loss_count += 1
                 elif game.location == Location.Away:
@@ -125,16 +123,19 @@ class RPIAdjusted(RPI):
                 else:
                     neutral_loss_count += 1
 
-        # Adjusted Win Count
-        adjusted_win_count = (home_win_count * 0.6) + \
-                             (neutral_win_count) + \
-                             (road_win_count * 1.4)
-        # Adjusted Loss Count
-        adjusted_loss_count = (home_loss_count * 1.4) + \
-                              (neutral_loss_count) + \
-                              (road_loss_count * 0.6)
-        # Adjusted Win Percentage
-        return adjusted_win_count / (adjusted_win_count + adjusted_loss_count) if adjusted_win_count + adjusted_loss_count > 0 else 0.0
+        adjusted_win_count = (
+            (home_win_count * 0.6) +
+            neutral_win_count +
+            (road_win_count * 1.4)
+        )
+        adjusted_loss_count = (
+            (home_loss_count * 1.4) +
+            neutral_loss_count +
+            (road_loss_count * 0.6)
+        )
+
+        return adjusted_win_count / (adjusted_win_count + adjusted_loss_count) \
+            if adjusted_win_count + adjusted_loss_count > 0 else 0.0
 
 
 class Bubble(RankingBase):
