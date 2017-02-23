@@ -1,3 +1,5 @@
+from functools import singledispatch
+
 from scheduleitem import Game, Location, Result
 
 
@@ -15,14 +17,9 @@ class Team:
         self.schedule = []
         self.wins = 0
         self.losses = 0
-        self.rpi_adj_rank = 0
-        self.rpi_adj = 0.0
-        self.sos_rank = 0
-        self.sos = 0.0
         self.last_n_games = ''
         self.last_n_games_record = '0-0'
         self.win_loss_str = ''
-        self.awp = 0.0
 
     def __str__(self):
         return '{} {}'.format(self.name, self.mascot)
@@ -53,11 +50,12 @@ class Team:
                 location = self.get_game_location(schedule_item)
                 result = self.get_game_result(location, schedule_item)
                 opponent = self.get_game_opponent(schedule_item)
+                score = self.get_game_score(schedule_item)
 
                 game = Game(
                     game_date=schedule_item.game_date,
                     opponent=opponent,
-                    score='',
+                    score=score,
                     location=location,
                     result=result
                 )
@@ -65,6 +63,15 @@ class Team:
                 self.opponents.append(opponent)
         self.wins = len([g for g in self.schedule if g.result == Result.Win])
         self.losses = len([g for g in self.schedule if g.result == Result.Loss])
+
+    def get_game_score(self, schedule_item):
+        home_team_score = schedule_item.home_team_score
+        away_team_score = schedule_item.away_team_score
+
+        if self.name == schedule_item.home_team:
+            return '{} - {}'.format(home_team_score, away_team_score)
+        else:
+            return '{} - {}'.format(away_team_score, home_team_score)
 
     def get_game_opponent(self, schedule_item):
         if self.name == schedule_item.home_team:
@@ -111,3 +118,33 @@ class Team:
                 else:
                     result = Result.Loss
         return result
+
+
+# For serialization of the `Team` object
+@singledispatch
+def team_serializer(val):
+    """
+    This is the default behavior
+    """
+    return str(val)
+
+
+@team_serializer.register(Team)
+def team_as_json(team):
+    return team.__dict__
+
+
+@team_serializer.register(Location)
+def location_as_json(location):
+    return location.name
+
+
+@team_serializer.register(Result)
+def result_as_json(result):
+    return result.name
+
+
+@team_serializer.register(Game)
+def game_as_json(game):
+    # TODO: this isn't serializing correctly
+    return {k: v for k, v in game._asdict().items()}

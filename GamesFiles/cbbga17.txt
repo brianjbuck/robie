@@ -4987,3 +4987,52 @@
 02/19/2017 UAB                     64 Western Kentucky        76    
 02/19/2017 Maryland                60 Wisconsin               71    
 02/19/2017 Penn                    71 Yale                    55    
+02/20/2017 Alabama A&M             59 Alcorn St.              74    
+02/20/2017 Norfolk St.             65 Bethune Cookman         75    
+02/20/2017 Morgan St.              65 Delaware St.            54    
+02/20/2017 Hampton                 76 Florida A&M             69    
+02/20/2017 Boston College          72 Florida St.            104    
+02/20/2017 UT Arlington            81 Georgia Southern        71    
+02/20/2017 Texas St.               51 Georgia St.             67    
+02/20/2017 North Carolina Central  66 Howard                  59    
+02/20/2017 North Carolina A&T      95 Maryland Eastern Shore 106 3  
+02/20/2017 Walla Walla             58 Portland                96    
+02/20/2017 Arkansas Pine Bluff     55 Prairie View A&M        73    
+02/20/2017 Coppin St.              84 Savannah St.            83    
+02/20/2017 Coastal Carolina        81 South Alabama           77 1  
+02/20/2017 Alabama St.             73 Southern                79    
+02/20/2017 Mississippi Valley St.  61 Texas Southern          92    
+02/20/2017 Iowa St.                82 Texas Tech              80 1  
+02/20/2017 Appalachian St.         66 Troy                    76    
+02/20/2017 Miami FL                54 Virginia                48 1  
+02/20/2017 Texas                   62 West Virginia           77    
+02/21/2017 Eastern Michigan        72 Ball St.                79    
+02/21/2017 Oklahoma                54 Baylor                  60    
+02/21/2017 Trevecca Nazarene       45 Belmont                 96    
+02/21/2017 Akron                   65 Bowling Green           66    
+02/21/2017 Kent St.                77 Buffalo                 69    
+02/21/2017 Northern Illinois       89 Central Michigan        66    
+02/21/2017 George Mason            70 Dayton                  83    
+02/21/2017 Cleveland St.           83 Detroit                 91    
+02/21/2017 Monmouth                82 Fairfield               62    
+02/21/2017 South Carolina          66 Florida                 81    
+02/21/2017 North Carolina St.      71 Georgia Tech            69    
+02/21/2017 Northwestern            50 Illinois                66    
+02/21/2017 Green Bay               87 Illinois Chicago        79    
+02/21/2017 Indiana                 90 Iowa                    96 1  
+02/21/2017 Rhode Island            67 La Salle                56    
+02/21/2017 Auburn                  98 LSU                     75    
+02/21/2017 St. John's              71 Marquette               93    
+02/21/2017 Ohio                    79 Miami OH                62    
+02/21/2017 Mississippi             87 Mississippi St.         82 1  
+02/21/2017 Kentucky                72 Missouri                62    
+02/21/2017 Colorado St.            68 New Mexico              56    
+02/21/2017 Wright St.              76 Northern Kentucky       83    
+02/21/2017 Youngstown St.          72 Oakland                101    
+02/21/2017 Purdue                  74 Penn St.                70 1  
+02/21/2017 Davidson                76 Richmond                84    
+02/21/2017 Western Michigan        61 Toledo                  56 1  
+02/21/2017 East Carolina           76 Tulane                  73    
+02/21/2017 Milwaukee               61 Valparaiso              67    
+02/21/2017 Clemson                 70 Virginia Tech           71    
+02/21/2017 Evansville              83 Wichita St.            109    
