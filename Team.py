@@ -1,4 +1,5 @@
-from functools import singledispatch
+import datetime
+import json
 
 from scheduleitem import Game, Location, Result
 
@@ -28,6 +29,20 @@ class Team:
         return '<{}: {} {}>'.format(
             self.__class__.__name__,
             self.name, self.mascot
+        )
+
+    @property
+    def serializable_fields(self):
+        return (
+            'name',
+            'mascot',
+            'conference',
+            'rank',
+            'score',
+            'opponents',
+            'schedule',
+            'wins',
+            'losses'
         )
 
     @property
@@ -121,30 +136,27 @@ class Team:
 
 
 # For serialization of the `Team` object
-@singledispatch
-def team_serializer(val):
-    """
-    This is the default behavior
-    """
-    return str(val)
-
-
-@team_serializer.register(Team)
-def team_as_json(team):
-    return team.__dict__
-
-
-@team_serializer.register(Location)
-def location_as_json(location):
-    return location.name
-
-
-@team_serializer.register(Result)
-def result_as_json(result):
-    return result.name
-
-
-@team_serializer.register(Game)
-def game_as_json(game):
-    # TODO: this isn't serializing correctly
-    return {k: v for k, v in game._asdict().items()}
+class TeamEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Team):
+            # Only serialize the specified fields
+            if obj.serializable_fields:
+                obj_map = {
+                    k: v for k, v in obj.__dict__.items()
+                    if k in obj.serializable_fields
+                }
+            else:
+                obj_map = obj.__dict__
+            # Game objects don't serialize correctly so find them and
+            # convert them to `OrderedDict` objects here which do
+            # serialize correctly. Accessing the `_asdict()` method is the
+            # official way of doing this.
+            obj_map['schedule'] = [g._asdict() for g in obj_map.get('schedule')]
+            return obj_map
+        elif isinstance(obj, Location):
+            return obj.name
+        elif isinstance(obj, Result):
+            return obj.name
+        elif isinstance(obj, datetime.date):
+            return str(obj)
+        return json.JSONEncoder.default(self, obj)
