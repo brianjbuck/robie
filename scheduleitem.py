@@ -6,15 +6,28 @@ from datetime import date
 __all__ = ('Location', 'Result', 'ScheduleItem')
 
 
-class Result(enum.Enum):
-    Win = enum.auto()
-    Loss = enum.auto()
+
 
 
 class Location(enum.Enum):
     Home = enum.auto()
     Away = enum.auto()
     Neutral = enum.auto()
+
+
+class Result(enum.Enum):
+    Win = enum.auto()
+    Loss = enum.auto()
+
+
+class Options(enum.Enum):
+    OT1 = 1
+    OT2 = 2
+    OT3 = 3
+    OT4 = 4
+    OT5 = 5
+    OT6 = 6
+    Postseason = enum.auto()
 
 
 Game = namedtuple(
@@ -24,7 +37,10 @@ Game = namedtuple(
         'opponent',
         'score',
         'location',
-        'result'
+        'result',
+        'city',
+        'overtime',
+        'postseaston'
     ]
 )
 

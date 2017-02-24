@@ -1,7 +1,7 @@
 import datetime
 import json
 
-from scheduleitem import Game, Location, Result
+from scheduleitem import Game, Location, Options, Result
 
 
 __all__ = ('Team',)
@@ -66,13 +66,19 @@ class Team:
                 result = self.get_game_result(location, schedule_item)
                 opponent = self.get_game_opponent(schedule_item)
                 score = self.get_game_score(schedule_item)
+                city = schedule_item.city or None
+                overtime = self.get_overtime(schedule_item)
+                postseason = self.is_postseason(schedule_item)
 
                 game = Game(
                     game_date=schedule_item.game_date,
                     opponent=opponent,
                     score=score,
                     location=location,
-                    result=result
+                    result=result,
+                    city=city,
+                    overtime=overtime,
+                    postseaston=postseason
                 )
                 self.schedule.append(game)
                 self.opponents.append(opponent)
@@ -134,6 +140,27 @@ class Team:
                     result = Result.Loss
         return result
 
+    @staticmethod
+    def is_postseason(schedule_item):
+        return 'p' in schedule_item.options.casefold()
+
+    @staticmethod
+    def get_overtime(schedule_item):
+        if '1' in schedule_item.options:
+            return Options.OT1
+        elif '2' in schedule_item.options:
+            return Options.OT2
+        elif '3' in schedule_item.options:
+            return Options.OT3
+        elif '4' in schedule_item.options:
+            return Options.OT4
+        elif '5' in schedule_item.options:
+            return Options.OT5
+        elif '6' in schedule_item.options:
+            return Options.OT6
+        else:
+            return None
+
 
 # For serialization of the `Team` object
 class TeamEncoder(json.JSONEncoder):
@@ -149,12 +176,14 @@ class TeamEncoder(json.JSONEncoder):
                 obj_map = obj.__dict__
             # Game objects don't serialize correctly so find them and
             # convert them to `OrderedDict` objects here which do
-            # serialize correctly. Accessing the `_asdict()` method is the
-            # official way of doing this.
+            # serialize correctly. Accessing the protected `_asdict()`
+            # method is the official way of doing this.
             obj_map['schedule'] = [g._asdict() for g in obj_map.get('schedule')]
             return obj_map
         elif isinstance(obj, Location):
             return obj.name
+        elif isinstance(obj, Options):
+            return obj.value
         elif isinstance(obj, Result):
             return obj.name
         elif isinstance(obj, datetime.date):
