@@ -1,25 +1,9 @@
-import csv
 import json
 
 import terminaltables
-
-from rankings import do_bubble, do_rpi, do_sos, do_rpi_adjusted
-from scheduleitem import ScheduleItem
-from team import Team, TeamEncoder
-
-
-def load_schedules(games_file):
-    with open(games_file, 'r') as f:
-        return [ScheduleItem.from_str(line) for line in f.readlines()]
-
-
-def load_teams_data(data_file):
-    with open(data_file, 'r') as csv_file:
-        reader = csv.reader(csv_file)
-        # Skip the header row
-        next(reader)
-        return [Team(row[0], row[2], row[3]) for row in reader]
-
+from filehandler import load_schedules, load_teams_data
+from rankings import do_bubble
+from team import TeamEncoder
 
 if __name__ == '__main__':
     teams = load_teams_data('d1_2017.csv')
