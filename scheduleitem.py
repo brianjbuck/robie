@@ -3,10 +3,7 @@ from collections import namedtuple
 from datetime import date
 
 
-__all__ = ('Location', 'Result', 'ScheduleItem')
-
-
-
+__all__ = ('Game', 'Location', 'Options', 'Result', 'ScheduleItem')
 
 
 class Location(enum.Enum):
