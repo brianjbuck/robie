@@ -1,6 +1,8 @@
 import csv
 import sys
-import urllib
+import urllib.error
+import urllib.request
+
 
 from scheduleitem import ScheduleItem
 from team import Team
@@ -11,43 +13,34 @@ def read(uri):
     if uri.startswith('http://') or uri.startswith('https://'):
         return open_url(uri)
     else:
-        return open_file(uri)
+        return open_local_file(uri)
 
 
 def open_url(url):
+    """Return the game file data."""
+    with urllib.request.urlopen(url) as response:
+        if response.status != 200:
+            msg = 'Status {}. Could Not Open URL {}. Reason: {}'
+            raise urllib.error.HTTPError(
+                msg.format(response.status, url, response.msg)
+            )
+        encoding = sys.getdefaultencoding()
+        return [line.decode(encoding) for line in response.readlines()]
+
+
+def open_local_file(uri):
     """Return the games file data as an array"""
-    try:
-        with urllib.request.urlopen(url) as response:
-            return response.read()
-    except urllib.HTTPError as e:
-        msg = "Could Not Open URL {}.\nThe Code is: {} "
-        print(msg.format(url, e.code))
-        sys.exit(1)
-    except urllib.URLError as e:
-        msg = "Could Not Open URL {}.\nThe Reason is: {} "
-        print(msg.format(url.url, e.reason))
-        sys.exit(1)
+    with open(uri, 'r') as f:
+        return f.readlines()
 
 
-def open_file(uri):
-    """Return the games file data as an array"""
-    try:
-        with open(uri, 'r') as f:
-            return f.read()
-    except IOError:
-        msg = "Could not open file: `{}`"
-        print(msg.format(uri))
-        sys.exit(1)
-
-
-def load_schedules(games_file):
-    with open(games_file, 'r') as f:
-        return [ScheduleItem.from_str(line) for line in f.readlines()]
+def load_schedules(uri):
+    data = read(uri)
+    return [ScheduleItem.from_str(line) for line in data]
 
 
 def load_teams_data(data_file):
     with open(data_file, 'r') as csv_file:
         reader = csv.reader(csv_file)
-        # Skip the header row
-        next(reader)
+        next(reader)  # Skip the header row
         return [Team(row[0], row[2], row[3]) for row in reader]
