@@ -4,7 +4,7 @@ import json
 from scheduleitem import Game, Location, Options, Result
 
 
-__all__ = ('Team',)
+__all__ = ('Team', 'TeamEncoder')
 
 
 class Team:
@@ -53,12 +53,16 @@ class Team:
     def unique_opponents(self):
         return list(set(self.opponents))
 
-    def load_schedule(self, schedule_items):
+    def load_schedule(self, schedule_items, include_postseason=False):
         """
         Take a list of ScheduleItem objects and load them into a team.
         Also, set the team's opponents at the same time.
         """
         for schedule_item in schedule_items:
+            postseason = self.is_postseason(schedule_item)
+            if postseason and not include_postseason:
+                continue
+
             home_team_name = schedule_item.home_team
             away_team_name = schedule_item.away_team
             if self.name == home_team_name or self.name == away_team_name:
@@ -68,7 +72,6 @@ class Team:
                 score = self.get_game_score(schedule_item)
                 city = schedule_item.city or None
                 overtime = self.get_overtime(schedule_item)
-                postseason = self.is_postseason(schedule_item)
 
                 game = Game(
                     game_date=schedule_item.game_date,
