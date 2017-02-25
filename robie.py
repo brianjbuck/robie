@@ -43,7 +43,7 @@ parser.add_argument(
 if __name__ == '__main__':
     args = parser.parse_args()
     teams = load_teams_data('d1_2017.csv')
-    schedule_items = load_schedules(uri=args.uri)
+    schedule_items = load_schedules(uri=args.uri, store_file=args.store)
 
     for team in teams:
         team.load_schedule(schedule_items, include_postseason=args.postseason)
