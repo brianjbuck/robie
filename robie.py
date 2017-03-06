@@ -1,14 +1,20 @@
 import argparse
 import json
 
-from filehandler import load_schedules, load_teams_data
+from filehandler import load_schedules, load_teams
 from rankings import do_bubble, do_rpi, do_rpi_adjusted, do_sos
 from team import TeamEncoder
 
 
 parser = argparse.ArgumentParser(prog='Robie')
 parser.add_argument(
-    'uri',
+    '-t',
+    '--teams',
+    help='The file location to retrieve teams that specify which teams to rank.'
+)
+parser.add_argument(
+    '-u',
+    '--uri',
     help='The file location to retrieve game data.'
 )
 parser.add_argument(
@@ -43,7 +49,7 @@ parser.add_argument(
 
 def main():
     args = parser.parse_args()
-    teams = load_teams_data('d1_2017.csv')
+    teams = load_teams(path=args.teams)
     schedule_items = load_schedules(uri=args.uri, store_file=args.store)
 
     for team in teams:

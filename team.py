@@ -8,35 +8,28 @@ __all__ = ('Team', 'TeamEncoder')
 
 
 class Team:
-    def __init__(self, name, mascot, conference):
+    def __init__(self, name):
         self.name = name
-        self.mascot = mascot
-        self.conference = conference
         self.rank = 0
         self.score = 0.0
         self.opponents = []
         self.schedule = []
         self.wins = 0
         self.losses = 0
-        self.last_n_games = ''
-        self.last_n_games_record = '0-0'
-        self.win_loss_str = ''
 
     def __str__(self):
-        return '{} {}'.format(self.name, self.mascot)
+        return '{}'.format(self.name)
 
     def __repr__(self):
-        return '<{}: {} {}>'.format(
+        return '<{}: {}>'.format(
             self.__class__.__name__,
-            self.name, self.mascot
+            self.name
         )
 
     @property
     def serializable_fields(self):
         return (
             'name',
-            'mascot',
-            'conference',
             'rank',
             'score',
             'opponents',

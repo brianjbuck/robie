@@ -4,7 +4,6 @@ import sys
 import urllib.error
 import urllib.request
 
-
 from scheduleitem import ScheduleItem
 from team import Team
 
@@ -33,7 +32,7 @@ def open_url(url, store_file=False):
 
 
 def write_local_file(file_name, data):
-    file_path = os.path.join('GamesFiles', file_name)
+    file_path = os.path.join('data', 'gamesfiles', file_name)
     with open(file_path, 'w') as f:
         f.write(''.join(data))
 
@@ -49,8 +48,6 @@ def load_schedules(uri, store_file=False):
     return [ScheduleItem.from_str(line) for line in data]
 
 
-def load_teams_data(data_file):
-    with open(data_file, 'r') as csv_file:
-        reader = csv.reader(csv_file)
-        next(reader)  # Skip the header row
-        return [Team(row[0], row[2], row[3]) for row in reader]
+def load_teams(path):
+    with open(path, 'r') as f:
+        return [Team(name.strip()) for name in f.readlines() if name.strip()]
