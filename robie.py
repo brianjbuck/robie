@@ -40,7 +40,8 @@ parser.add_argument(
     help='Include this flag if you want to include postseason games.'
 )
 
-if __name__ == '__main__':
+
+def main():
     args = parser.parse_args()
     teams = load_teams_data('d1_2017.csv')
     schedule_items = load_schedules(uri=args.uri, store_file=args.store)
@@ -76,3 +77,6 @@ if __name__ == '__main__':
     else:
         msg = 'Specified output format not recognized: `{}`'
         raise RuntimeError(msg.format(args.format))
+
+if __name__ == '__main__':
+    main()
