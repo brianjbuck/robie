@@ -1,11 +1,10 @@
-import csv
 import os
 import sys
 import urllib.error
 import urllib.request
 
-from scheduleitem import ScheduleItem
-from team import Team
+from robie.scheduleitem import ScheduleItem
+from robie.team import Team
 
 
 def read(uri, store_file=False):

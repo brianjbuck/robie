@@ -3,8 +3,8 @@ import json
 
 from filehandler import load_schedules, load_teams
 from rankings import do_bubble, do_rpi, do_rpi_adjusted, do_sos
-from team import TeamEncoder
 
+from robie.team import TeamEncoder
 
 parser = argparse.ArgumentParser(prog='Robie')
 parser.add_argument(

@@ -1,8 +1,7 @@
 import datetime
 import json
 
-from scheduleitem import Game, Location, Options, Result
-
+from robie.scheduleitem import Game, Location, Options, Result
 
 __all__ = ('Team', 'TeamEncoder')
 

@@ -1,6 +1,6 @@
 import copy
 
-from scheduleitem import Location, Result
+from robie.scheduleitem import Location, Result
 
 __all__ = (
     'Bubble', 'RPI', 'SOS',
@@ -152,7 +152,6 @@ class Bubble(RankingBase):
 
         self.starting_scores = {}
         self.ending_scores = {}
-        self.iterations = 100
         self.start = start
         self.base = base
         self.bonus = bonus
