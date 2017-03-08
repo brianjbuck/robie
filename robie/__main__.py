@@ -1,20 +1,22 @@
 import argparse
 import json
+import sys
 
-from filehandler import load_schedules, load_teams
-from rankings import do_bubble, do_rpi, do_rpi_adjusted, do_sos
-
+from robie import filehandler, rankings
 from robie.team import TeamEncoder
+
 
 parser = argparse.ArgumentParser(prog='Robie')
 parser.add_argument(
     '-t',
     '--teams',
+    required=True,
     help='The file location to retrieve teams that specify which teams to rank.'
 )
 parser.add_argument(
     '-u',
     '--uri',
+    required=True,
     help='The file location to retrieve game data.'
 )
 parser.add_argument(
@@ -49,20 +51,23 @@ parser.add_argument(
 
 def main():
     args = parser.parse_args()
-    teams = load_teams(path=args.teams)
-    schedule_items = load_schedules(uri=args.uri, store_file=args.store)
+    teams = filehandler.load_teams(path=args.teams)
+    schedule_items = filehandler.load_schedules(
+        uri=args.uri,
+        store_file=args.store
+    )
 
     for team in teams:
         team.load_schedule(schedule_items, include_postseason=args.postseason)
 
     if args.method.lower() == 'bubble':
-        ranked = do_bubble(teams)
+        ranked = rankings.do_bubble(teams)
     elif args.method.lower() == 'rpi':
-        ranked = do_rpi(teams)
+        ranked = rankings.do_rpi(teams)
     elif args.method.lower() == 'rpiadj':
-        ranked = do_rpi_adjusted(teams)
+        ranked = rankings.do_rpi_adjusted(teams)
     elif args.method.lower() == 'sos':
-        ranked = do_sos(teams)
+        ranked = rankings.do_sos(teams)
     else:
         msg = 'Specified method not recognized: `{}`'
         raise RuntimeError(msg.format(args.method))
@@ -85,4 +90,9 @@ def main():
         raise RuntimeError(msg.format(args.format))
 
 if __name__ == '__main__':
-    main()
+    try:
+        sys.exit(main())
+    except KeyboardInterrupt:
+        # https://github.com/jkbrzt/httpie/blob/master/httpie/__init__.py
+        # http://www.tldp.org/LDP/abs/html/exitcodes.html
+        sys.exit(130)

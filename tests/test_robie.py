@@ -1,12 +1,14 @@
 import unittest
 
+from . import context
+
 from robie import rankings, filehandler
 
 
 class CliTest(unittest.TestCase):
     def setUp(self):
-        self.teams = filehandler.load_teams(path='tests/test_teams.txt')
-        schedule_items = filehandler.load_schedules(uri='tests/test_data.txt')
+        self.teams = filehandler.load_teams(path='tests/teams.txt')
+        schedule_items = filehandler.load_schedules(uri='tests/data.txt')
 
         for team in self.teams:
             team.load_schedule(schedule_items)
