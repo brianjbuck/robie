@@ -3,13 +3,17 @@
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
+charset = utf-8
+end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
-end_of_line = lf
-charset = utf-8
 
 # Docstrings and comments use max_line_length = 79
 [*.py]
+indent_size = 4
+indent_style = space
 max_line_length = 119
+
+# Makefiles always use tabs for indentation
+[Makefile]
+indent_style = tab
