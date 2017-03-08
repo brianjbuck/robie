@@ -5631,3 +5631,36 @@
 03/05/2017 William & Mary          94 UNC Wilmington         105 NT  North Charleston, SC
 03/05/2017 Campbell                59 Winthrop                76 T  
 03/05/2017 Minnesota               49 Wisconsin               66    
+03/06/2017 UNC Wilmington          78 College of Charleston   69 nT  North Charleston, SC
+03/06/2017 Howard                  79 Coppin St.              73 NT  Norfolk, VA
+03/06/2017 Northern Illinois       69 Eastern Michigan        72 T  
+03/06/2017 Santa Clara             68 Gonzaga                 77 NT  Las Vegas, NV
+03/06/2017 Milwaukee               74 Illinois Chicago        68 NT  Detroit, MI
+03/06/2017 Central Michigan       106 Kent St.               116 T1 
+03/06/2017 North Carolina A&T      67 Maryland Eastern Shore  74 NT  Norfolk, VA
+03/06/2017 IUPUI                   62 Nebraska Omaha          90 NT  Sioux Falls, SD
+03/06/2017 Youngstown St.          74 Northern Kentucky       84 NT  Detroit, MI
+03/06/2017 BYU                     50 Saint Mary's            81 NT  Las Vegas, NV
+03/06/2017 Iona                    87 Siena                   86 T1 
+03/06/2017 South Dakota St.        74 South Dakota            71 NT  Sioux Falls, SD
+03/06/2017 Albany                  63 Stony Brook             56 T  
+03/06/2017 Bowling Green           62 Toledo                  77 T  
+03/06/2017 East Tennessee St.      79 UNC Greensboro          74 NT  Asheville, NC
+03/06/2017 New Hampshire           41 Vermont                 74 T  
+03/06/2017 Miami OH                61 Western Michigan        65 T  
+03/07/2017 Mississippi Valley St.  60 Alcorn St.              63 T  
+03/07/2017 North Carolina St.      61 Clemson                 75 NT  Brooklyn, NY
+03/07/2017 Bethune Cookman         69 Delaware St.            62 NT  Norfolk, VA
+03/07/2017 Pittsburgh              61 Georgia Tech            59 NT  Brooklyn, NY
+03/07/2017 Saint Mary's            56 Gonzaga                 74 NT  Las Vegas, NV
+03/07/2017 Sacramento St.          91 Idaho St.               76 NT  Reno, NV
+03/07/2017 Southern Utah          109 Montana St.            105 NT3 Reno, NV
+03/07/2017 St. Francis PA          61 Mount St. Mary's        71 T  
+03/07/2017 Milwaukee               53 Northern Kentucky       59 NT  Detroit, MI
+03/07/2017 Northern Arizona        67 Portland St.            80 NT  Reno, NV
+03/07/2017 Grambling St.           81 Prairie View A&M        77 T  
+03/07/2017 Florida A&M             78 South Carolina St.      82 NT1 Norfolk, VA
+03/07/2017 Nebraska Omaha          77 South Dakota St.        79 nT  Sioux Falls, SD
+03/07/2017 Jackson St.             63 Southern                69 T  
+03/07/2017 Alabama St.             72 Texas Southern          87 T  
+03/07/2017 Boston College          78 Wake Forest             92 NT  Brooklyn, NY
