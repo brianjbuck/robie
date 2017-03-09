@@ -18,12 +18,12 @@ class CliTest(unittest.TestCase):
 
     def test_bubble_ranking(self):
         expected_scores = {
-            'Team_A': 0.5041787018237359,
-            'Team_B': 0.5339406065856407,
-            'Team_C': 0.5875120351570693,
-            'Team_D': 0.458683799862728,
-            'Team_E': 0.3851310827761169,
-            'Team_F': 0.37705114680150353,
+            'Team_A': 0.5071547638798607,
+            'Team_B': 0.5428690495941463,
+            'Team_C': 0.5904880972131941,
+            'Team_D': 0.46123471004048305,
+            'Team_E': 0.3881071448322416,
+            'Team_F': 0.374500016162932,
         }
         for team in rankings.do_bubble(self.teams):
             print(team, team.score)
@@ -47,11 +47,11 @@ class CliTest(unittest.TestCase):
     def test_rpi_adjusted_ranking(self):
         expected_scores = {
             'Team_A': 0.5344611528822055,
-            'Team_B': 0.5507276645720581,
+            'Team_B': 0.5536715051517683,
             'Team_C': 0.5710871730608573,
             'Team_D': 0.517657072726553,
             'Team_E': 0.4486911723753829,
-            'Team_F': 0.461269374282434,
+            'Team_F': 0.4593943742824339,
         }
         for team in rankings.do_rpi_adjusted(self.teams):
             print(team, team.score)

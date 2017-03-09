@@ -1,4 +1,4 @@
-12/30/2016 Team_F                  56 Team_B                  63
+12/30/2016 Team_F                  56 Team_B                  63 N   Honolulu, HI
 12/30/2016 Team_C                  86 Team_E                  80
 01/04/2017 Team_B                  63 Team_A                  65
 01/07/2017 Team_D                  57 Team_A                  61
