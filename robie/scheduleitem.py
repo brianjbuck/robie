@@ -37,7 +37,7 @@ Game = namedtuple(
         'result',
         'city',
         'overtime',
-        'postseaston'
+        'postseason'
     ]
 )
 

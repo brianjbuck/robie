@@ -73,7 +73,7 @@ class Team:
                     result=result,
                     city=city,
                     overtime=overtime,
-                    postseaston=postseason
+                    postseason=postseason
                 )
                 self.schedule.append(game)
                 self.opponents.append(opponent)
