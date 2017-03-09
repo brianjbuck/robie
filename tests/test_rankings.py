@@ -3,7 +3,7 @@ import unittest
 from robie import rankings, filehandler
 
 
-class CliTest(unittest.TestCase):
+class TestRankings(unittest.TestCase):
     def setUp(self):
         self.teams = filehandler.load_teams(path='tests/teams.txt')
         schedule_items = filehandler.load_schedules(uri='tests/data.txt')
