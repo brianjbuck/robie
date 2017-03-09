@@ -1,7 +1,5 @@
 import unittest
 
-from . import context
-
 from robie import rankings, filehandler
 
 
