@@ -14,15 +14,15 @@
 01/25/2017 Team_F                  61 Team_A                  65
 02/01/2017 Team_A                  68 Team_C                  73
 02/04/2017 Team_B                  92 Team_C                  89 1
-02/07/2017 Team_F                  61 Team_E                  62
-02/08/2017 Team_A                  72 Team_D                  69
-02/11/2017 Team_E                  52 Team_A                  70
-02/11/2017 Team_C                  80 Team_F                  79
-02/13/2017 Team_A                  78 Team_F                  84
+02/07/2017 Team_F                  61 Team_E                  62 2
+02/08/2017 Team_A                  72 Team_D                  69 3
+02/11/2017 Team_E                  52 Team_A                  70 4
+02/11/2017 Team_C                  80 Team_F                  79 5
+02/13/2017 Team_A                  78 Team_F                  84 6
 02/15/2017 Team_D                  71 Team_E                  68
 02/18/2017 Team_C                  67 Team_A                  65
 02/18/2017 Team_E                  71 Team_B                  84
-02/20/2017 Team_B                  82 Team_F                  80 1
+02/20/2017 Team_B                  82 Team_F                  80
 02/22/2017 Team_E                  68 Team_C                  87
 02/25/2017 Team_A                  69 Team_B                  72
 02/25/2017 Team_F                  63 Team_D                  80
