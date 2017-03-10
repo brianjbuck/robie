@@ -166,4 +166,3 @@ class TestTeam(unittest.TestCase):
         output = json.loads(f.getvalue())
         self.assertIsInstance(output, list)
         self.assertTrue(len(output) == 6)
-
