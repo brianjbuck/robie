@@ -50,7 +50,7 @@ parser.add_argument(
 def main():
     args = parser.parse_args()
     teams = filehandler.load_teams(path=args.teams)
-    schedule_items = filehandler.load_schedules(
+    schedule_items = filehandler.parse_schedules(
         uri=args.uri,
         store_file=args.store
     )

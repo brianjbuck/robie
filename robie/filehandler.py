@@ -1,3 +1,4 @@
+import csv
 import os
 import sys
 import urllib.error
@@ -38,13 +39,29 @@ def write_local_file(file_name, data):
 
 def open_local_file(uri):
     """Return the games file data as an array"""
-    with open(uri, 'r') as f:
-        return f.readlines()
+    file_name, ext = os.path.splitext(uri)
+    if ext == '.csv':
+        with open(uri, 'r') as csv_file:
+            reader = csv.reader(csv_file)
+            return [[col for col in row] for row in reader]
+    else:
+        with open(uri, 'r') as f:
+            return f.readlines()
 
 
-def load_schedules(uri, store_file=False):
+def parse_schedules(uri, store_file=False):
+    """
+    Detect if the data is in gamesfile format or from CSV (list of lists), then
+    parse the data into list of dicts.
+    """
     data = read(uri, store_file=store_file)
-    return [ScheduleItem.from_str(line) for line in data]
+    if len(data):
+        if isinstance(data[0], list):
+            return [ScheduleItem.from_list(line) for line in data]
+        elif isinstance(data[0], str):
+            return [ScheduleItem.from_str(line) for line in data]
+    else:
+        raise ValueError('Data file didn\'t read correctly or was empty.')
 
 
 def load_teams(path):

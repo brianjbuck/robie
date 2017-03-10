@@ -6,7 +6,7 @@ from robie import rankings, filehandler
 class TestRankings(unittest.TestCase):
     def setUp(self):
         self.teams = filehandler.load_teams(path='tests/teams.txt')
-        schedule_items = filehandler.load_schedules(uri='tests/data.txt')
+        schedule_items = filehandler.parse_schedules(uri='tests/data.txt')
 
         for team in self.teams:
             team.load_schedule(schedule_items)

@@ -105,3 +105,34 @@ class ScheduleItem(ScheduleItemBase):
             home_team_result=home_team_result,
             away_team_result=away_team_result
         )
+
+    @classmethod
+    def from_list(cls, list_values):
+        away_team_score = int(list_values[2])
+        home_team_score = int(list_values[4])
+
+        if home_team_score > away_team_score:
+            home_team_result = Result.Win
+        else:
+            home_team_result = Result.Loss
+
+        if away_team_score > home_team_score:
+            away_team_result = Result.Win
+        else:
+            away_team_result = Result.Loss
+
+        options = list_values[5].strip()
+        city = list_values[6].strip()
+
+        return ScheduleItem(
+            game_date=cls.date_from_string(list_values[0].strip()),
+            away_team=list_values[1].strip(),
+            away_team_score=away_team_score,
+            home_team=list_values[3].strip(),
+            home_team_score=home_team_score,
+            options=options,
+            location=Location.Neutral if options.casefold() == 'n' else '',
+            city=city,
+            home_team_result=home_team_result,
+            away_team_result=away_team_result
+        )
