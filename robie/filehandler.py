@@ -22,7 +22,11 @@ def open_url(url, store_file=False):
         if response.status != 200:
             msg = 'Status {}. Could Not Open URL {}. Reason: {}'
             raise urllib.error.HTTPError(
-                msg.format(response.status, url, response.msg)
+                url=url,
+                code=response.status,
+                msg=msg.format(response.status, url, response.msg),
+                hdrs={},
+                fp=None
             )
         encoding = sys.getdefaultencoding()
         encoded_data = [line.decode(encoding) for line in response.readlines()]

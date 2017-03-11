@@ -1,5 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
+import urllib
 
 from robie import filehandler
 
@@ -37,3 +38,14 @@ class TestFileHandler(unittest.TestCase):
             uri='http://kenpom.com/cbbga17.txt'
         )
         self.assertEquals(len(schedule_items), 34)
+
+    @patch('urllib.request.urlopen')
+    def test_filehandler_open_url_status_not_200(self, mock_urlopen):
+        cm = MagicMock()
+        cm.status = 404
+        cm.msg = 'Not found.'
+        cm.__enter__.return_value = cm
+        mock_urlopen.return_value = cm
+
+        with self.assertRaises(urllib.error.HTTPError):
+            filehandler.parse_schedules(uri='http://kenpom.com/cbbga17.txt')
