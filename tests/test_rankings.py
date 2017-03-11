@@ -23,10 +23,21 @@ class TestRankings(unittest.TestCase):
             'Team_E': 0.3881071448322416,
             'Team_F': 0.374500016162932,
         }
-        for team in rankings.do_bubble(self.teams):
-            print(team, team.score)
-        for team in rankings.do_bubble(self.teams):
+        expected_ranks = {
+            'Team_A': 3,
+            'Team_B': 2,
+            'Team_C': 1,
+            'Team_D': 4,
+            'Team_E': 5,
+            'Team_F': 6
+        }
+        ranked_teams = rankings.do_bubble(self.teams)
+        for team in ranked_teams:
+            print(team, team.rank, team.score)
+        for team in ranked_teams:
             self.assertEqual(team.score, expected_scores.get(team.name))
+        for team in ranked_teams:
+            self.assertEqual(team.rank, expected_ranks.get(team.name))
 
     def test_rpi_ranking(self):
         expected_scores = {
@@ -37,10 +48,21 @@ class TestRankings(unittest.TestCase):
             'Team_E': 0.46297688666109715,
             'Team_F': 0.476894374282434,
         }
-        for team in rankings.do_rpi(self.teams):
+        expected_ranks = {
+            'Team_A': 3,
+            'Team_B': 2,
+            'Team_C': 1,
+            'Team_D': 4,
+            'Team_E': 6,
+            'Team_F': 5
+        }
+        ranked_teams = rankings.do_rpi(self.teams)
+        for team in ranked_teams:
             print(team, team.score)
-        for team in rankings.do_rpi(self.teams):
+        for team in ranked_teams:
             self.assertEqual(team.score, expected_scores.get(team.name))
+        for team in ranked_teams:
+            self.assertEqual(team.rank, expected_ranks.get(team.name))
 
     def test_rpi_adjusted_ranking(self):
         expected_scores = {
@@ -51,10 +73,21 @@ class TestRankings(unittest.TestCase):
             'Team_E': 0.4486911723753829,
             'Team_F': 0.4593943742824339,
         }
-        for team in rankings.do_rpi_adjusted(self.teams):
+        expected_ranks = {
+            'Team_A': 3,
+            'Team_B': 2,
+            'Team_C': 1,
+            'Team_D': 4,
+            'Team_E': 6,
+            'Team_F': 5
+        }
+        ranked_teams = rankings.do_rpi_adjusted(self.teams)
+        for team in ranked_teams:
             print(team, team.score)
-        for team in rankings.do_rpi_adjusted(self.teams):
+        for team in ranked_teams:
             self.assertEqual(team.score, expected_scores.get(team.name))
+        for team in ranked_teams:
+            self.assertEqual(team.rank, expected_ranks.get(team.name))
 
     def test_sos_ranking(self):
         expected_scores = {
@@ -65,7 +98,18 @@ class TestRankings(unittest.TestCase):
             'Team_E': 0.5506358488814629,
             'Team_F': 0.5525258323765786,
         }
-        for team in rankings.do_sos(self.teams):
+        expected_ranks = {
+            'Team_A': 4,
+            'Team_B': 5,
+            'Team_C': 6,
+            'Team_D': 3,
+            'Team_E': 2,
+            'Team_F': 1
+        }
+        ranked_teams = rankings.do_sos(self.teams)
+        for team in ranked_teams:
             print(team, team.score)
-        for team in rankings.do_sos(self.teams):
+        for team in ranked_teams:
             self.assertEqual(team.score, expected_scores.get(team.name))
+        for team in ranked_teams:
+            self.assertEqual(team.rank, expected_ranks.get(team.name))
