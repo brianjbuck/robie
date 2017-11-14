@@ -1,12 +1,18 @@
 import copy
+from collections import namedtuple
 
 from robie.scheduleitem import Location, Result
 
 __all__ = (
     'Bubble', 'RPI', 'SOS',
     'do_bubble', 'do_sos',
-    'do_rpi', 'do_rpi_adjusted'
+    'do_rpi', 'do_rpi_adjusted',
+    'method_names', 'methods'
 )
+
+method_values = ['bubble', 'rpi', 'rpiadj', 'sos']
+MethodNames = namedtuple('MethodNames', method_values)
+method_names = MethodNames(*method_values)
 
 
 class RankingBase:
@@ -275,3 +281,10 @@ do_rpi = RPI()
 do_rpi_adjusted = RPIAdjusted()
 do_sos = SOS()
 do_bubble = Bubble()
+
+methods = {
+    method_names.bubble: do_bubble,
+    method_names.rpi: do_rpi,
+    method_names.rpiadj: do_rpi_adjusted,
+    method_names.sos: do_sos
+}

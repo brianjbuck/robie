@@ -58,17 +58,12 @@ def main():
     for team in teams:
         team.load_schedule(schedule_items, include_postseason=args.postseason)
 
-    if args.method.lower() == 'bubble':
-        ranked = rankings.do_bubble(teams)
-    elif args.method.lower() == 'rpi':
-        ranked = rankings.do_rpi(teams)
-    elif args.method.lower() == 'rpiadj':
-        ranked = rankings.do_rpi_adjusted(teams)
-    elif args.method.lower() == 'sos':
-        ranked = rankings.do_sos(teams)
-    else:
+    try:
+        method = rankings.methods[args.method.lower()]
+    except KeyError:
         msg = f'Specified method not recognized: `{args.method}`'
         raise RuntimeError(msg)
+    ranked = method(teams)
 
     if args.format.lower() == 'plain':
         output = '{:>3}\t{:05.4f}\t({})\t{}'
