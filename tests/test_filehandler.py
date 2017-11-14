@@ -7,7 +7,7 @@ from robie import filehandler
 
 class TestFileHandler(unittest.TestCase):
     def setUp(self):
-        pass
+        self.data_csv = 'tests/data.csv'
 
     def tearDown(self):
         pass

@@ -5664,3 +5664,173 @@
 03/07/2017 Jackson St.             63 Southern                69 T  
 03/07/2017 Alabama St.             72 Texas Southern          87 T  
 03/07/2017 Boston College          78 Wake Forest             92 NT  Brooklyn, NY
+03/08/2017 Stanford                88 Arizona St.             98 NT1 Las Vegas, NV
+03/08/2017 Louisiana Monroe        73 Arkansas St.            70 NT1 New Orleans, LA
+03/08/2017 Missouri                86 Auburn                  83 NT1 Nashville, TN
+03/08/2017 Lehigh                  65 Bucknell                81 T  
+03/08/2017 Oregon St.              62 California              67 NT  Las Vegas, NV
+03/08/2017 South Alabama           67 Coastal Carolina        80 NT  New Orleans, LA
+03/08/2017 Washington St.          63 Colorado                73 NT  Las Vegas, NV
+03/08/2017 Clemson                 72 Duke                    79 NT  Brooklyn, NY
+03/08/2017 Saint Louis             72 Duquesne                71 nT  Pittsburgh, PA
+03/08/2017 Southeastern Louisiana  65 Lamar                   77 NT  Katy, TX
+03/08/2017 Little Rock             71 Louisiana Lafayette     78 NT  New Orleans, LA
+03/08/2017 Florida Atlantic        74 Marshall                89 NT  Birmingham, AL
+03/08/2017 Saint Joseph's          63 Massachusetts           70 NT  Pittsburgh, PA
+03/08/2017 LSU                     52 Mississippi St.         79 NT  Nashville, TN
+03/08/2017 Penn St.                76 Nebraska                67 NT1 Washington, DC
+03/08/2017 South Carolina St.      88 Norfolk St.             93 nT1 Norfolk, VA
+03/08/2017 Bethune Cookman         60 North Carolina Central  95 NT  Norfolk, VA
+03/08/2017 Rutgers                 66 Ohio St.                57 NT  Washington, DC
+03/08/2017 Southern Miss           75 Rice                    86 NT  Birmingham, AL
+03/08/2017 Central Arkansas        69 Sam Houston St.         77 NT  Katy, TX
+03/08/2017 Georgetown              73 St. John's              74 nT  New York, NY
+03/08/2017 Miami FL                62 Syracuse                57 NT  Brooklyn, NY
+03/08/2017 Oklahoma                63 TCU                     82 NT  Kansas City, MO
+03/08/2017 Texas                   61 Texas Tech              52 NT  Kansas City, MO
+03/08/2017 Appalachian St.         64 Troy                    84 NT  New Orleans, LA
+03/08/2017 Charlotte               73 UAB                     74 nT  Birmingham, AL
+03/08/2017 San Diego St.           62 UNLV                    52 T1 
+03/08/2017 Washington              73 USC                     78 NT  Las Vegas, NV
+03/08/2017 San Jose St.            64 Utah St.                90 NT  Las Vegas, NV
+03/08/2017 Pittsburgh              63 Virginia                75 NT  Brooklyn, NY
+03/08/2017 Wake Forest             90 Virginia Tech           99 NT  Brooklyn, NY
+03/08/2017 UTSA                    56 Western Kentucky        52 NT  Birmingham, AL
+03/08/2017 Air Force               83 Wyoming                 68 NT  Las Vegas, NV
+03/08/2017 DePaul                  64 Xavier                  75 NT  New York, NY
+03/09/2017 Eastern Michigan        62 Akron                   79 NT  Cleveland, OH
+03/09/2017 Mississippi St.         55 Alabama                 75 NT  Nashville, TN
+03/09/2017 Colorado                78 Arizona                 92 NT  Las Vegas, NV
+03/09/2017 Western Michigan        63 Ball St.                66 NT  Cleveland, OH
+03/09/2017 Kansas St.              70 Baylor                  64 NT  Kansas City, MO
+03/09/2017 San Diego St.           87 Boise St.               68 NT  Las Vegas, NV
+03/09/2017 Kent St.                68 Buffalo                 65 NT  Cleveland, OH
+03/09/2017 Xavier                  62 Butler                  57 NT  New York, NY
+03/09/2017 Cal St. Northridge      68 Cal St. Fullerton       81 NT  Anaheim, CA
+03/09/2017 Air Force               55 Colorado St.            81 NT  Las Vegas, NV
+03/09/2017 South Florida           66 Connecticut             77 T  
+03/09/2017 Sacramento St.          70 Eastern Washington      89 NT  Reno, NV
+03/09/2017 Virginia Tech           68 Florida St.             74 NT  Brooklyn, NY
+03/09/2017 New Mexico              60 Fresno St.              65 NT  Las Vegas, NV
+03/09/2017 Fordham                 71 George Mason            82 NT1 Pittsburgh, PA
+03/09/2017 Saint Louis             46 George Washington       53 NT  Pittsburgh, PA
+03/09/2017 Tennessee               57 Georgia                 59 NT  Nashville, TN
+03/09/2017 Maryland Eastern Shore  68 Hampton                 66 NT  Norfolk, VA
+03/09/2017 Sam Houston St.         63 Houston Baptist         59 NT  Katy, TX
+03/09/2017 Montana                 77 Idaho                   81 NT  Reno, NV
+03/09/2017 Indiana                 95 Iowa                    73 NT  Washington, DC
+03/09/2017 Oklahoma St.            83 Iowa St.                92 NT  Kansas City, MO
+03/09/2017 TCU                     85 Kansas                  82 nT  Kansas City, MO
+03/09/2017 Davidson                82 La Salle                73 NT  Pittsburgh, PA
+03/09/2017 Hawaii                  62 Long Beach St.          73 NT  Anaheim, CA
+03/09/2017 UAB                     57 Louisiana Tech          69 NT  Birmingham, AL
+03/09/2017 Duke                    81 Louisville              77 NT  Brooklyn, NY
+03/09/2017 Seton Hall              82 Marquette               76 NT  New York, NY
+03/09/2017 Illinois                55 Michigan                75 NT  Washington, DC
+03/09/2017 Penn St.                51 Michigan St.            78 NT  Washington, DC
+03/09/2017 UTSA                    70 Middle Tennessee        86 NT  Birmingham, AL
+03/09/2017 Missouri                74 Mississippi             86 NT  Nashville, TN
+03/09/2017 Howard                  68 Morgan St.              65 NT  Norfolk, VA
+03/09/2017 Utah St.                69 Nevada                  83 NT  Las Vegas, NV
+03/09/2017 Chicago St.             53 New Mexico St.          67 NT  Las Vegas, NV
+03/09/2017 Miami FL                53 North Carolina          78 NT  Brooklyn, NY
+03/09/2017 Portland St.            72 North Dakota            95 NT  Reno, NV
+03/09/2017 Rutgers                 61 Northwestern            83 NT  Washington, DC
+03/09/2017 Virginia                58 Notre Dame              71 NT  Brooklyn, NY
+03/09/2017 Toledo                  66 Ohio                    67 NT  Cleveland, OH
+03/09/2017 Marshall                64 Old Dominion            63 NT  Birmingham, AL
+03/09/2017 Arizona St.             57 Oregon                  80 NT  Las Vegas, NV
+03/09/2017 Creighton               70 Providence              58 NT  New York, NY
+03/09/2017 Massachusetts           60 St. Bonaventure         73 NT  Pittsburgh, PA
+03/09/2017 Villanova              108 St. John's              67 nT  New York, NY
+03/09/2017 Lamar                   59 Stephen F. Austin       75 NT  Katy, TX
+03/09/2017 East Carolina           80 Temple                  69 NT  Hartford, CT
+03/09/2017 Tulane                  60 Tulsa                   66 NT  Hartford, CT
+03/09/2017 Cal Poly                55 UC Davis                66 NT  Anaheim, CA
+03/09/2017 UC Riverside            67 UC Irvine               76 NT  Anaheim, CA
+03/09/2017 USC                     74 UCLA                    76 NT  Las Vegas, NV
+03/09/2017 UT Rio Grande Valley    78 UMKC                    82 NT1 Las Vegas, NV
+03/09/2017 California              78 Utah                    75 NT  Las Vegas, NV
+03/09/2017 Seattle                 53 Utah Valley             65 NT  Las Vegas, NV
+03/09/2017 Rice                    76 UTEP                    86 NT  Birmingham, AL
+03/09/2017 Texas A&M               41 Vanderbilt              66 nT  Nashville, TN
+03/09/2017 Southern Utah           70 Weber St.               90 NT  Reno, NV
+03/09/2017 Texas                   53 West Virginia           63 NT  Kansas City, MO
+03/10/2017 Ball St.                70 Akron                   74 NT  Cleveland, OH
+03/10/2017 Southern                59 Alcorn St.              81 NT  Houston, TX
+03/10/2017 UCLA                    75 Arizona                 86 NT  Las Vegas, NV
+03/10/2017 Mississippi             72 Arkansas                73 NT  Nashville, TN
+03/10/2017 Utah Valley             80 Cal St. Bakersfield     81 NT4 Las Vegas, NV
+03/10/2017 Tulsa                   61 Cincinnati              80 NT  Hartford, CT
+03/10/2017 San Diego St.           63 Colorado St.            71 NT  Las Vegas, NV
+03/10/2017 Houston                 65 Connecticut             74 T  
+03/10/2017 Xavier                  72 Creighton               75 NT  New York, NY
+03/10/2017 Davidson                73 Dayton                  67 NT  Pittsburgh, PA
+03/10/2017 Weber St.               80 Eastern Washington      72 NT  Reno, NV
+03/10/2017 Notre Dame              77 Florida St.             73 NT  Brooklyn, NY
+03/10/2017 Troy                    90 Georgia Southern        70 NT  New Orleans, LA
+03/10/2017 Louisiana Lafayette     76 Georgia St.             86 NT  New Orleans, LA
+03/10/2017 TCU                     63 Iowa St.                84 NT  Kansas City, MO
+03/10/2017 Georgia                 60 Kentucky                71 NT  Nashville, TN
+03/10/2017 Marshall                93 Louisiana Tech          77 NT  Birmingham, AL
+03/10/2017 Northwestern            72 Maryland                64 nT  Washington, DC
+03/10/2017 UTEP                    56 Middle Tennessee        82 NT  Birmingham, AL
+03/10/2017 Michigan St.            58 Minnesota               63 NT  Washington, DC
+03/10/2017 Fresno St.              72 Nevada                  83 NT  Las Vegas, NV
+03/10/2017 UMKC                    60 New Mexico St.          78 NT  Las Vegas, NV
+03/10/2017 Sam Houston St.         63 New Orleans             75 NT  Katy, TX
+03/10/2017 Howard                  53 Norfolk St.             68 nT  Norfolk, VA
+03/10/2017 Duke                    93 North Carolina          83 NT  Brooklyn, NY
+03/10/2017 Maryland Eastern Shore  49 North Carolina Central  79 NT  Norfolk, VA
+03/10/2017 Idaho                   64 North Dakota            69 NT  Reno, NV
+03/10/2017 Kent St.                68 Ohio                    66 NT  Cleveland, OH
+03/10/2017 California              65 Oregon                  73 NT  Las Vegas, NV
+03/10/2017 Michigan                74 Purdue                  70 NT1 Washington, DC
+03/10/2017 St. Bonaventure         63 Rhode Island            74 NT  Pittsburgh, PA
+03/10/2017 George Washington       67 Richmond                70 NT  Pittsburgh, PA
+03/10/2017 East Carolina           77 SMU                     81 NT  Hartford, CT
+03/10/2017 Alabama                 64 South Carolina          53 NT  Nashville, TN
+03/10/2017 Stephen F. Austin       69 Texas A&M Corpus Chris  77 NT  Katy, TX
+03/10/2017 Grambling St.           57 Texas Southern          62 nT  Houston, TX
+03/10/2017 Louisiana Monroe        51 Texas St.               63 NT  New Orleans, LA
+03/10/2017 Cal St. Fullerton       64 UC Davis                66 NT1 Anaheim, CA
+03/10/2017 Long Beach St.          57 UC Irvine               62 NT  Anaheim, CA
+03/10/2017 Memphis                 54 UCF                     84 NT  Hartford, CT
+03/10/2017 Coastal Carolina        51 UT Arlington            74 NT  New Orleans, LA
+03/10/2017 Florida                 62 Vanderbilt              72 nT1 Nashville, TN
+03/10/2017 George Mason            60 VCU                     71 NT  Pittsburgh, PA
+03/10/2017 Seton Hall              53 Villanova               55 NT  New York, NY
+03/10/2017 Kansas St.              50 West Virginia           51 NT  Kansas City, MO
+03/10/2017 Indiana                 60 Wisconsin               70 NT  Washington, DC
+03/11/2017 Kent St.                70 Akron                   65 NT  Cleveland, OH
+03/11/2017 New Mexico St.          70 Cal St. Bakersfield     60 NT  Las Vegas, NV
+03/11/2017 Cincinnati              81 Connecticut             71 T  
+03/11/2017 Troy                    74 Georgia St.             63 NT  New Orleans, LA
+03/11/2017 Yale                    73 Harvard                 71 NT  Philadelphia, PA
+03/11/2017 Alabama                 74 Kentucky                79 NT  Nashville, TN
+03/11/2017 Marshall                72 Middle Tennessee        83 NT  Birmingham, AL
+03/11/2017 Michigan                84 Minnesota               77 NT  Washington, DC
+03/11/2017 Colorado St.            71 Nevada                  79 NT  Las Vegas, NV
+03/11/2017 Texas A&M Corpus Chris  65 New Orleans             68 NT1 Katy, TX
+03/11/2017 North Carolina Central  67 Norfolk St.             59 nT  Norfolk, VA
+03/11/2017 Weber St.               89 North Dakota            93 NT1 Reno, NV
+03/11/2017 Duke                    75 Notre Dame              69 NT  Brooklyn, NY
+03/11/2017 Arizona                 83 Oregon                  80 NT  Las Vegas, NV
+03/11/2017 Princeton               72 Penn                    64 T1 
+03/11/2017 Davidson                60 Rhode Island            84 NT  Pittsburgh, PA
+03/11/2017 UCF                     59 SMU                     70 NT  Hartford, CT
+03/11/2017 Alcorn St.              50 Texas Southern          53 nT  Houston, TX
+03/11/2017 UC Davis                50 UC Irvine               47 NT  Anaheim, CA
+03/11/2017 Texas St.               83 UT Arlington            62 NT  New Orleans, LA
+03/11/2017 Arkansas                76 Vanderbilt              62 nT  Nashville, TN
+03/11/2017 Richmond                77 VCU                     87 NT1 Pittsburgh, PA
+03/11/2017 Albany                  53 Vermont                 56 T  
+03/11/2017 Creighton               60 Villanova               74 NT  New York, NY
+03/11/2017 Iowa St.                80 West Virginia           74 NT  Kansas City, MO
+03/11/2017 Northwestern            48 Wisconsin               76 NT  Washington, DC
+03/12/2017 Arkansas                65 Kentucky                82 NT  Nashville, TN
+03/12/2017 Yale                    59 Princeton               71 NT  Philadelphia, PA
+03/12/2017 Cincinnati              56 SMU                     71 NT  Hartford, CT
+03/12/2017 Troy                    59 Texas St.               53 NT  New Orleans, LA
+03/12/2017 Rhode Island            70 VCU                     63 NT  Pittsburgh, PA
+03/12/2017 Michigan                71 Wisconsin               56 NT  Washington, DC
