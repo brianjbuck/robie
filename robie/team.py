@@ -17,13 +17,10 @@ class Team:
         self.losses = 0
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return f'{self.name}'
 
     def __repr__(self):
-        return '<{}: {}>'.format(
-            self.__class__.__name__,
-            self.name
-        )
+        return f'<{self.__class__.__name__}: {self.name}>'
 
     @property
     def serializable_fields(self):
@@ -39,7 +36,7 @@ class Team:
 
     @property
     def record(self):
-        return '{}-{}'.format(self.wins, self.losses)
+        return f'{self.wins}-{self.losses}'
 
     @property
     def unique_opponents(self):
@@ -85,9 +82,9 @@ class Team:
         away_team_score = schedule_item.away_team_score
 
         if self.name == schedule_item.home_team:
-            return '{} - {}'.format(home_team_score, away_team_score)
+            return f'{home_team_score} - {away_team_score}'
         else:
-            return '{} - {}'.format(away_team_score, home_team_score)
+            return f'{away_team_score} - {home_team_score}'
 
     def get_game_opponent(self, schedule_item):
         if self.name == schedule_item.home_team:

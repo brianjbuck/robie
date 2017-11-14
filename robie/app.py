@@ -67,8 +67,8 @@ def main():
     elif args.method.lower() == 'sos':
         ranked = rankings.do_sos(teams)
     else:
-        msg = 'Specified method not recognized: `{}`'
-        raise RuntimeError(msg.format(args.method))
+        msg = f'Specified method not recognized: `{args.method}`'
+        raise RuntimeError(msg)
 
     if args.format.lower() == 'plain':
         output = '{:>3}\t{:05.4f}\t({})\t{}'
@@ -84,5 +84,5 @@ def main():
     elif args.format.lower() == 'json':
         print(json.dumps(ranked, cls=TeamEncoder, indent=2))
     else:
-        msg = 'Specified output format not recognized: `{}`'
-        raise RuntimeError(msg.format(args.format))
+        msg = f'Specified output format not recognized: `{args.format}`'
+        raise RuntimeError(msg)

@@ -20,11 +20,14 @@ def open_url(url, store_file=False):
     """Return the game file data."""
     with urllib.request.urlopen(url) as response:
         if response.status != 200:
-            msg = 'Status {}. Could Not Open URL {}. Reason: {}'
+            msg = (
+                    f'Status {response.status}. Could Not Open URL {url}. '
+                    f'Reason: {response.msg}'
+                )
             raise urllib.error.HTTPError(
                 url=url,
                 code=response.status,
-                msg=msg.format(response.status, url, response.msg),
+                msg=msg,
                 hdrs={},
                 fp=None
             )
